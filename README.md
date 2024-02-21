@@ -1,50 +1,27 @@
-[![Mbed OS][mbed-os-logo]][mbed-os-link]
-
-[![Build status master][mbed-master-svg]][mbed-master]
-[![Tools coverage status][mbed-coveralls-tools-svg]][mbed-coveralls-tools]
-
-[mbed-os-logo]: logo.png
-[mbed-os-link]: https://www.mbed.com/en/platform/mbed-os/
-[mbed-master]: https://github.com/ARMmbed/mbed-os/actions/workflows/basic_checks.yml
-[mbed-master-svg]: https://github.com/ARMmbed/mbed-os/actions/workflows/basic_checks.yml/badge.svg
-[mbed-coveralls-tools]: https://coveralls.io/github/ARMmbed/mbed-os?branch=master
-[mbed-coveralls-tools-svg]: https://coveralls.io/repos/github/ARMmbed/mbed-os/badge.svg?branch=master
-
-Arm Mbed OS is an open source embedded operating system designed specifically for the "things" in the Internet of Things. It includes all the features you need to develop a connected product based on an Arm Cortex-M microcontroller, including security, connectivity, an RTOS and drivers for sensors and I/O devices.
-
-Mbed OS provides a platform that includes:
-
-- Security foundations.
-- Cloud management services.
-- Drivers for sensors, I/O devices and connectivity.
-
-## Release notes
-The [release notes](https://os.mbed.com/releases) detail the current release. You can also find information about previous versions.
-
-## License and contributions
-
-The software is provided under the [Apache-2.0 license](LICENSE-apache-2.0.txt). Contributions to this project are accepted under the same license. Please see [contributing.md](CONTRIBUTING.md) for more information.
-
-This project contains code from other projects. The original license text is included in those source files. They must comply with our [license guide](https://os.mbed.com/docs/mbed-os/latest/contributing/license.html).
-
-Folders containing files under different permissive license than Apache 2.0 are listed in the [LICENSE](LICENSE.md) file.
-
-## Getting started for developers
-
-We have a [developer website](https://os.mbed.com) for asking questions, engaging with others, finding information on boards and components, using an online IDE and compiler, reading the documentation and learning about what's new and what's coming next in Mbed OS.
-
-## Getting started for contributors
-
-We also have a [contributing and publishing guide](https://os.mbed.com/contributing/) that covers licensing, contributor agreements and style guidelines.
-
-## Documentation
-
-For more information about Mbed OS, please see [our published documentation](https://os.mbed.com/docs/latest). It includes Doxygen for our APIs, step-by-step tutorials, porting information and background reference materials about our architecture and tools.
-
-To contribute to this documentation, please see the [mbed-os-5-docs repository](https://github.com/ARMmbed/mbed-os-5-docs).
-
-## Security considerations for production application
-
-Please note that if you intend to use Mbed OS in a real product then you should consider the security implications of your application. Mbed OS provides user hooks (functions prefixed with WEAK symbol) that are intended to be overridden. We recommend that you carefully consider the threat model of your application and override the default user hooks provided by Mbed OS to fit your application's security needs.
-
-For example, Mbed OS executes [`mbed_die`](https://github.com/ARMmbed/mbed-os/blob/master/platform/source/mbed_board.c#L26) when there is an error. `mbed_die` by default halts the system. A production application should override weakly linked `mbed_die` function and provide own implementation suitable for their needs taking care of any security vulnerabilities and production considerations. 
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a href="https://www.mbed.com/en/platform/mbed-os/" rel="nofollow"><img src="/ARMmbed/mbed-os/raw/master/logo.png" alt="mbed操作系统" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://github.com/ARMmbed/mbed-os/actions/workflows/basic_checks.yml"><img src="https://github.com/ARMmbed/mbed-os/actions/workflows/basic_checks.yml/badge.svg" alt="构建状态主控" style="max-width: 100%;"></a>
+<a href="https://coveralls.io/github/ARMmbed/mbed-os?branch=master" rel="nofollow"><img src="https://camo.githubusercontent.com/3c7ad0e8774530f5689ca2929f38cafe8099211b0bface983c7a25eb8aeb152e/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f41524d6d6265642f6d6265642d6f732f62616467652e7376673f6272616e63683d6d6173746572" alt="工具覆盖状态" data-canonical-src="https://coveralls.io/repos/github/ARMmbed/mbed-os/badge.svg?branch=master" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Arm Mbed OS 是一款专为物联网中的“物”而设计的开源嵌入式操作系统。它包含开发基于 Arm Cortex-M 微控制器的互联产品所需的所有功能，包括安全性、连接性、RTOS 以及传感器和 I/O 设备的驱动程序。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mbed OS 提供的平台包括：</font></font></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全基础。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">云管理服务。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">传感器、I/O 设备和连接的驱动程序。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-release-notes" class="anchor" aria-hidden="true" tabindex="-1" href="#release-notes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发行说明</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发行</font></font><a href="https://os.mbed.com/releases" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">说明</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">详细介绍了当前版本。您还可以找到有关以前版本的信息。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-license-and-contributions" class="anchor" aria-hidden="true" tabindex="-1" href="#license-and-contributions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可和贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="/ARMmbed/mbed-os/blob/master/LICENSE-apache-2.0.txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该软件根据Apache-2.0 许可证</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供</font><font style="vertical-align: inherit;">。对该项目的贡献是在同一许可证下接受的。请参阅</font></font><a href="/ARMmbed/mbed-os/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">contributing.md</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">了解更多信息。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该项目包含来自其他项目的代码。原始许可证文本包含在这些源文件中。他们必须遵守我们的</font></font><a href="https://os.mbed.com/docs/mbed-os/latest/contributing/license.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="/ARMmbed/mbed-os/blob/master/LICENSE.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LICENSE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件中列出了包含与 Apache 2.0 不同的宽松许可证下的文件的文件夹</font><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-getting-started-for-developers" class="anchor" aria-hidden="true" tabindex="-1" href="#getting-started-for-developers"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员入门</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们有一个</font></font><a href="https://os.mbed.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，用于提出问题、与其他人互动、查找有关主板和组件的信息、使用在线 IDE 和编译器、阅读文档以及了解 Mbed OS 的新增功能和后续功能。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-getting-started-for-contributors" class="anchor" aria-hidden="true" tabindex="-1" href="#getting-started-for-contributors"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献者入门</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们还有一份</font></font><a href="https://os.mbed.com/contributing/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献和发布指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，涵盖许可、贡献者协议和风格指南。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-documentation" class="anchor" aria-hidden="true" tabindex="-1" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关 Mbed OS 的更多信息，请参阅</font></font><a href="https://os.mbed.com/docs/latest" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们发布的文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。它包括用于我们的 API 的 Doxygen、分步教程、移植信息以及有关我们的架构和工具的背景参考材料。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要为本文档做出贡献，请参阅</font></font><a href="https://github.com/ARMmbed/mbed-os-5-docs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mbed-os-5-docs 存储库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-security-considerations-for-production-application" class="anchor" aria-hidden="true" tabindex="-1" href="#security-considerations-for-production-application"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生产应用的安全考虑</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请注意，如果您打算在实际产品中使用 Mbed OS，那么您应该考虑应用程序的安全隐患。 Mbed OS 提供旨在被覆盖的用户挂钩（以 WEAK 符号为前缀的函数）。我们建议您仔细考虑应用程序的威胁模型，并覆盖 Mbed OS 提供的默认用户挂钩，以满足应用程序的安全需求。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">例如，Mbed OS</font></font><a href="https://github.com/ARMmbed/mbed-os/blob/master/platform/source/mbed_board.c#L26"><code>mbed_die</code></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在出现错误时执行。</font></font><code>mbed_die</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">默认情况下停止系统。生产应用程序应该覆盖弱链接</font></font><code>mbed_die</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">功能，并提供适合其需求的自己的实现，同时考虑到任何安全漏洞和生产注意事项。</font></font></p>
+</article></div>
